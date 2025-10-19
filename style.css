@@ -95,7 +95,7 @@ th, td {
 }
 
 th {
-  background-color: #004080; /* azul institucional */
+  background-color: #004080; 
   color: white;
   text-transform: uppercase;
 }
@@ -106,4 +106,103 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #e6f2ff; /* efecto al pasar el mouse */
+}
+
+/* === Detalles decorativos adicionales === */
+h2::before {
+  content: "> ";
+  color: #188cff;
+  font-size: 18px;
+}
+
+button, a {
+  transition: all 0.3s ease;
+}
+
+button:hover, a:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Animaciones y transiciones ===== */
+
+/* Aparición suave de las secciones */
+section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efecto de resaltar el título al pasar el mouse */
+h2:hover {
+  color: #ffcc00;
+  transition: color 0.3s ease;
+}
+
+/* Movimiento sutil en imágenes */
+img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+/* ===== DISEÑO RESPONSIVO ===== */
+
+/* Ajustes para tablets */
+@media (max-width: 992px) {
+  body {
+    font-size: 15px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  img, video {
+    width: 90%;
+  }
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  audio, video {
+    width: 100%;
+  }
+}
+
+/* ===== FLEXBOX para multimedia ===== */
+.multimedia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.multimedia img, .multimedia video {
+  width: 300px;
+  border-radius: 10px;
 }
