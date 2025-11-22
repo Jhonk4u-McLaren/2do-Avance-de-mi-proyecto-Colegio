@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+  
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colegio Libertador Ramón Castilla - Apata</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- HEADER + MENÚ RESPONSIVO -->
   <header>
-    <h1>Colegio Libertador Ramón Castilla</h1>
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Nosotros</a>
-      <a href="#">Contacto</a>
+    <nav class="navbar">
+      <h1>Colegio LRC Apata</h1>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Horarios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+
+      <div class="menu-btn" id="menuBtn">☰</div>
     </nav>
   </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
 
   <main>
     <section>
@@ -51,109 +64,105 @@
         Así finalizó uno de los sucesos más trascendentales de los últimos tiempos para el gran pueblo de Apata.</p>
     </section>
 
+    <!-- FORMULARIO DE CONTACTO -->
     <section>
       <h2>Contáctanos</h2>
       <form>
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <br><br>
+        <input type="text" id="nombre" required>
 
         <label for="email">Correo:</label>
-        <input type="email" id="email" name="email">
-
-        <br><br>
+        <input type="email" id="email">
 
         <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-
-        <br><br>
+        <textarea id="mensaje"></textarea>
 
         <button type="submit">Enviar</button>
       </form>
     </section>
 
+    <!-- MULTIMEDIA -->
     <section>
-      <h2>PRIALÉ ANTE EL PUEBLO</h2>
+      <h2>Prialé ante el Pueblo</h2>
       <div class="multimedia">
         <img src="recursos/priale.jpg" alt="Foto de Prialé">
         <img src="recursos/priale2.jpg" alt="Foto de Prialé">
       </div>
 
-      <h2>FOTOS DEL COLEGIO</h2>
+      <h2>Fotos del Colegio</h2>
       <div class="multimedia">
         <img src="recursos/colegio.jpg" alt="Foto del colegio">
+
         <audio controls>
           <source src="recursos/musicaC.mp3" type="audio/mpeg">
         </audio>
+
         <video controls>
           <source src="recursos/videoLRC.mp4" type="video/mp4">
         </video>
       </div>
     </section>
 
-    
+
+    <!-- HORARIO -->
     <section>
       <h2>Horario Semanal</h2>
-      <table border="1" cellpadding="5" cellspacing="0">
+      <table>
         <tr>
-          <th>Hora</th>
-          <th>Lunes</th>
-          <th>Martes</th>
-          <th>Miércoles</th>
-          <th>Jueves</th>
-          <th>Viernes</th>
+          <th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th>
+          <th>Jueves</th><th>Viernes</th>
         </tr>
 
-        <!-- Bloque 1: 8:30 - 11:30 -->
-        <tr>
-          <td>8:30 - 9:15</td>
-          <td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>9:15 - 10:00</td>
-          <td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>10:00 - 10:45</td>
-          <td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>10:45 - 11:30</td>
-          <td></td><td></td><td></td><td></td><td></td>
-        </tr>
+        <tr><td>8:30 - 9:15</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>9:15 - 10:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>10:00 - 10:45</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>10:45 - 11:30</td><td></td><td></td><td></td><td></td><td></td></tr>
 
-        <!-- Refrigerio -->
-        <tr style="background-color:#f2f2f2;">
+        <tr class="refrigerio">
           <td>11:30 - 12:00</td>
-          <td colspan="5" style="text-align:center;">Refrigerio</td>
+          <td colspan="5">Refrigerio</td>
         </tr>
 
-        <!-- Bloque 2: 12:00 - 2:00 -->
-        <tr>
-          <td>12:00 - 12:45</td>
-          <td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>12:45 - 1:30</td>
-          <td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>1:30 - 2:00</td>
-          <td></td><td></td><td></td><td></td><td></td>
-        </tr>
+        <tr><td>12:00 - 12:45</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>12:45 - 1:30</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>1:30 - 2:00</td><td></td><td></td><td></td><td></td><td></td></tr>
 
-        <!-- Bloque 3: Reforzamiento -->
         <tr>
           <td>2:00 - 3:00</td>
-          <td>Reforzamiento</td><td>Reforzamiento</td><td>Reforzamiento</td><td>Reforzamiento</td><td>Reforzamiento</td>
+          <td>Reforzamiento</td><td>Reforzamiento</td><td>Reforzamiento</td>
+          <td>Reforzamiento</td><td>Reforzamiento</td>
         </tr>
       </table>
     </section>
 
+    <!-- NOTICIAS DINÁMICAS (JS) -->
+    <section>
+      <h2>Noticias del Colegio</h2>
+      <div id="noticias"></div>
+      <button id="btnCargar">Cargar Noticias</button>
+    </section>
+
+    <!-- MODAL (VENTANA FLOTANTE) -->
+    <button id="openModal" class="modal-btn">Abrir información</button>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <h2>Información del Colegio</h2>
+        <p>Somos la I.E. Libertador Ramón Castilla, formamos estudiantes líderes.</p>
+      </div>
+    </div>
+
   </main>
 
+
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Colegio Libertador Ramón Castilla - Apata</p>
   </footer>
+
+  <!-- ARCHIVO JS -->
+  <script src="script.js"></script>
+
 </body>
+</html>
